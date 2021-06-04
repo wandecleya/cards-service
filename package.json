@@ -1,0 +1,24 @@
+{
+  "name": "cards-service",
+  "version": "1.0.0",
+  "description": "cards againt humanity service",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wandecleya/cards-service.git"
+  },
+  "keywords": [
+    "cardgame",
+    "node",
+    "service"
+  ],
+  "author": "wandecleya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wandecleya/cards-service/issues"
+  },
+  "homepage": "https://github.com/wandecleya/cards-service#readme"
+}
