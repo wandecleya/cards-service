@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/wandecleya/cards-service/issues"
   },
-  "homepage": "https://github.com/wandecleya/cards-service#readme"
+  "homepage": "https://github.com/wandecleya/cards-service#readme",
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  }
 }
