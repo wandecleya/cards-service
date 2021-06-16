@@ -12,6 +12,11 @@ app.get('/respostas', (req, res) => {
   res.send({"title": "Respostas"});
 });
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+});
+
+
 app.use(express.static(__dirname + '/../public'));
 
 app.use((req, res) => {
