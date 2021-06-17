@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -12,10 +13,7 @@ app.get('/respostas', (req, res) => {
   res.send({"title": "Respostas"});
 });
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-});
-
+app.use(cors());
 
 app.use(express.static(__dirname + '/../public'));
 
