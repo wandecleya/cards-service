@@ -3,6 +3,8 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors());
+
 app.get('/', (req, res) => {
   res.type('text/plain');
   res.send('Home');
@@ -12,8 +14,6 @@ app.get('/respostas', (req, res) => {
   res.type('application/json');
   res.send({"title": "Respostas"});
 });
-
-app.use(cors());
 
 app.use(express.static(__dirname + '/../public'));
 
