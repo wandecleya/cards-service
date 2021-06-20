@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const controllers = require('./controllers/controllers.ts');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -10,10 +11,7 @@ app.get('/', (req, res) => {
   res.send('Home');
 });
 
-app.get('/respostas', (req, res) => {
-  res.type('application/json');
-  res.send({"title": "Respostas"});
-});
+app.get('/respostas', controllers.getRespostas);
 
 app.use(express.static(__dirname + '/../public'));
 
