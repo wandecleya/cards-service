@@ -1,10 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const controllers = require('./controllers/controllers.ts');
+const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
   res.type('text/plain');
@@ -12,6 +14,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/respostas', controllers.getRespostas);
+app.get('/escolhidas', controllers.getEscolhidas);
+app.post('/escolher', controllers.postEscolher);
+app.delete('/deleteEscolhidas', controllers.deleteEscolhidas);
+app.delete('/deleteRespostas', controllers.deleteRespostas);
 
 app.use(express.static(__dirname + '/../public'));
 
