@@ -1,7 +1,7 @@
 const todasRespostas = require('../data/cartasDeResposta.json').respostas;
 let respostasNoDeck = [];
-let embaralhar = () => {
-  respostasNoDeck = todasRespostas;
+const embaralhar = () => {
+  respostasNoDeck = [ ...todasRespostas ];
 };
 let respostasEscolhidas = [];
 
