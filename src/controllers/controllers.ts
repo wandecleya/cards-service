@@ -23,7 +23,7 @@ exports.getEscolhidas = async (req, res) => {
 }
 
 exports.postEscolher = async (req, res) => {
-  const resposta = req.body.resposta;
+  const resposta = req.body;
   respostasEscolhidas.push(resposta);
 }
 
