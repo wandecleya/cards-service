@@ -23,8 +23,9 @@ exports.getEscolhidas = async (req, res) => {
 }
 
 exports.postEscolher = async (req, res) => {
-  const resposta = req.body;
+  const resposta = await req.body;
   respostasEscolhidas.push(resposta);
+  res.json({});
 }
 
 exports.deleteEscolhidas = async (req, res) => {
